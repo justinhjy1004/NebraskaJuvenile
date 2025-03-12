@@ -9,6 +9,8 @@ CaseDocuments/
 CaseRecords/
 CaseSearch/
 CaseSearchAll/
+CaseSearch_Infraction_Delinquency/
+ExactDOB/
 JVCase.db
 chromedriver
 FirstDraftData.csv
