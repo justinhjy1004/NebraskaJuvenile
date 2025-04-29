@@ -1,8 +1,19 @@
 library(tidyverse)
+library(lubridate)
 
-df <- read_csv("Counts.csv")
+## Fiscal Year
+get_fiscal_year <- function(date) {
+  year_part <- year(date)
+  fiscal_year <- if_else(month(date) >= 7, year_part + 1, year_part)
+  return(fiscal_year)
+}
 
-scone <- read_csv("SCONE.csv") |>
+df <- read_csv("./Data/JuvenileCaseInfo.csv") |>
+  mutate(Year = get_fiscal_year(mdy(FiledDate))) |>
+  group_by(Classification, County, Year) |>
+  summarize( count = n())
+
+scone <- read_csv("./Data/SCONE.csv") |>
   gather(key = "Classification", value = "count", 3:5) |>
   mutate(Source = "SCONE")
 

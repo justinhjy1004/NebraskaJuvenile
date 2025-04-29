@@ -12,6 +12,7 @@ CaseSearchAll/
 CaseSearch_Infraction_Delinquency/
 ExactDOB/
 Data/
+DailySNEC/
 JVCase.db
 chromedriver
 FirstDraftData.csv
