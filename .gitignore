@@ -16,6 +16,7 @@ DailySNEC/
 JVCase.db
 chromedriver
 FirstDraftData.csv
+test*
 
 # C extensions
 *.so
